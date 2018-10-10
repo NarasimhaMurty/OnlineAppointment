@@ -5,17 +5,9 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'OnlineDoc.dbo.Patient' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Patient">
           <Key>
             <PropertyRef Name="UserID" />
-            <PropertyRef Name="FirstName" />
-            <PropertyRef Name="LastName" />
-            <PropertyRef Name="EmailID" />
-            <PropertyRef Name="Password" />
-            <PropertyRef Name="IsEmailVarified" />
-            <PropertyRef Name="ActivationCode" />
           </Key>
           <Property Name="UserID" Type="int" Nullable="false" />
           <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
@@ -23,22 +15,9 @@ warning 6002: The table/view 'OnlineDoc.dbo.Patient' does not have a primary key
           <Property Name="EmailID" Type="varchar" MaxLength="254" Nullable="false" />
           <Property Name="DateOfBirth" Type="datetime" />
           <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="IsEmailVarified" Type="bit" Nullable="false" />
-          <Property Name="ActivationCode" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
         <EntityContainer Name="ModelsStoreContainer">
-          <EntitySet Name="Patient" EntityType="Self.Patient" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Patient].[UserID] AS [UserID], 
-    [Patient].[FirstName] AS [FirstName], 
-    [Patient].[LastName] AS [LastName], 
-    [Patient].[EmailID] AS [EmailID], 
-    [Patient].[DateOfBirth] AS [DateOfBirth], 
-    [Patient].[Password] AS [Password], 
-    [Patient].[IsEmailVarified] AS [IsEmailVarified], 
-    [Patient].[ActivationCode] AS [ActivationCode]
-    FROM [dbo].[Patient] AS [Patient]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="Patient" EntityType="Self.Patient" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -48,12 +27,6 @@ warning 6002: The table/view 'OnlineDoc.dbo.Patient' does not have a primary key
         <EntityType Name="Patient">
           <Key>
             <PropertyRef Name="UserID" />
-            <PropertyRef Name="FirstName" />
-            <PropertyRef Name="LastName" />
-            <PropertyRef Name="EmailID" />
-            <PropertyRef Name="Password" />
-            <PropertyRef Name="IsEmailVarified" />
-            <PropertyRef Name="ActivationCode" />
           </Key>
           <Property Name="UserID" Type="Int32" Nullable="false" />
           <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
@@ -61,8 +34,6 @@ warning 6002: The table/view 'OnlineDoc.dbo.Patient' does not have a primary key
           <Property Name="EmailID" Type="String" MaxLength="254" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
           <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="IsEmailVarified" Type="Boolean" Nullable="false" />
-          <Property Name="ActivationCode" Type="Guid" Nullable="false" />
         </EntityType>
         <EntityContainer Name="PatientContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Patients" EntityType="Self.Patient" />
@@ -82,8 +53,6 @@ warning 6002: The table/view 'OnlineDoc.dbo.Patient' does not have a primary key
                 <ScalarProperty Name="EmailID" ColumnName="EmailID" />
                 <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="IsEmailVarified" ColumnName="IsEmailVarified" />
-                <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
