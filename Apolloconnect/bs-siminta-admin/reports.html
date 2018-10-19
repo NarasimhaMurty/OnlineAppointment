@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo Connect-Reports</title>
+    <!-- Core CSS - Include with every page -->
+    <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+      <link href="assets/css/main-style.css" rel="stylesheet" />
+
+    <!-- Page-Level CSS -->
+    <link href="assets/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!--  wrapper -->
+    <div id="wrapper">
+        <!-- navbar top -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+            <!-- navbar-header -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                   
+                </a>
+            </div>
+            <!-- end navbar-header -->
+            <!-- navbar-top-links -->
+<ul class="nav navbar-top-links navbar-right">   
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-3x"></i>
+                    </a>
+                    <!-- dropdown user-->
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                        </li>
+                        
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                        </li>
+                    </ul>
+                    <!-- end dropdown-user -->
+                </li>
+                <!-- end main dropdown -->
+            </ul>
+            <!-- end navbar-top-links -->
+
+        </nav>
+        <!-- end navbar top -->
+
+        <!-- navbar side -->
+        <nav class="navbar-default navbar-static-side" role="navigation"> 
+            <!-- sidebar-collapse -->
+            <div class="sidebar-collapse"> 
+                <!-- side-menu -->
+                <ul class="nav" id="side-menu"> 
+                    <li> 
+			<!-- <div id="sidebar-wrapper">
+            
+				<ul class="sidebar-nav">
+                
+                    <li class="sidebar-brand"> -->
+                        <!-- user image section-->
+                        <div class="user-section">
+                            <div class="user-section-inner">
+                                <img src="assets/img/boy.png" alt="" class="img-circle">
+                            </div>
+                            <div class="user-info">
+                                <div> <strong>Murty</strong></div>
+                              <br/>
+                            </div>
+                        </div>
+                        <!--end user image section-->
+                    </li>
+                    
+                    <li>
+                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                    </li>
+                    
+                     <li>
+                        <a href="#"><i class="fa fa-edit fa-fw"></i>Raise Ticket<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="enduser.html">End User</a>
+                            </li>
+                            <li>
+                                <a href="supportteam.html">Support Team</a>
+                            </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                    
+                    <li>
+                        <a href="forms.html"><i class="fa fa-gear fa-fw"></i>Ticket Settings</a>
+                    </li>
+                    
+                    <li class="selected">
+                        <a href="reports.html"><i class="fa fa-files-o fa-fw"></i>Reports</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user fa-fw"></i>Admin<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li >
+                        <a href="adduser.html"><i class="fa fa-user fa-fw"></i>Add User</a>
+                    </li>
+                           <li>
+                        <a href="addmodule.html" ><i class="fa fa-files-o fa-fw"></i>Add Module</a>
+                    </li>
+					<li>
+                        <a href="addorigin.html"><i class="fa fa-files-o fa-fw"></i>Add Origin</a>
+                    </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                </ul>
+                <!-- end side-menu -->
+            </div>
+            <!-- end sidebar-collapse -->
+         </nav>
+        <!-- end navbar side -->
+        <!--  page-wrapper -->
+        <div id="page-wrapper">
+
+            
+            <div class="row">
+                 <!--  page header -->
+                <div class="col-lg-12">
+                    <h1 class="page-header">Reports</h1>
+					<ul class="nav navbar-top-links navbar-right">
+				<li class="dropdown">
+                    <a  href="#">
+                        <span class="top-label label label-primary ">Export to Excel</span>
+                    </a>
+				</li>
+				</ul>
+                </div>
+                 <!-- end  page header -->
+            </div>
+                        <div class="row">
+                <div class="col-lg-12">
+                    <!-- Advanced Tables -->
+                    <div class="panel panel-default">
+                        
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>Bug Id</th>
+                                            <th>Bug Title</th>
+                                            <th>Module</th>
+                                            <th>Type</th>
+                                            <th>Origin</th>
+                                            <th>Severity</th>
+                                            <th>Source Name</th>
+                                            <th>Action By</th>
+ 					    <th>Date and Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd gradeX">
+                                            <td><a href="tables.html" /> 123</td>
+                                            <td>Issue in radiology</td>
+                                            <td>Radiology</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="even gradeC">
+                                            <td><a href="#" /> 456</td>
+                                            <td>Issue in Lab</td>
+                                            <td>Lab</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Hyderabad</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+
+                                        </tr>
+                                        <tr class="odd gradeA">
+                                            <td><a href="#" /> 321</td>
+                                            <td>Issue in ES</td>
+                                            <td>ES</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td><a href="#" /> 897</td>
+                                            <td>Issue in Billing</td>
+                                            <td>Billing</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Kolkata</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="odd gradeA">
+                                            <td><a href="#" /> 145</td>
+                                            <td>Login Issue in Medmantra</td>
+                                            <td>Registration</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td><a href="#" /> 147</td>
+                                            <td>Slowness in radiology</td>
+                                            <td>Radiology</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Bhubaneswar</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 189</td>
+                                            <td>Issue in MM</td>
+                                            <td>MM</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 191</td>
+                                            <td>Issue in CRM</td>
+                                            <td>CRM</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Mumbai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 235</td>
+                                            <td>Issue in Dynamic Forms</td>
+                                            <td>Dynamic Forms</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 456</td>
+                                            <td>Issue in Pharmacy</td>
+                                            <td>Pharmacy</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td><a href="#" /> 897</td>
+                                            <td>Issue in Billing</td>
+                                            <td>Billing</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Kolkata</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="odd gradeA">
+                                            <td><a href="#" /> 145</td>
+                                            <td>Login Issue in Medmantra</td>
+                                            <td>Registration</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td><a href="#" /> 147</td>
+                                            <td>Slowness in radiology</td>
+                                            <td>Radiology</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Bhubaneswar</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 189</td>
+                                            <td>Issue in MM</td>
+                                            <td>MM</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 191</td>
+                                            <td>Issue in CRM</td>
+                                            <td>CRM</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Mumbai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 235</td>
+                                            <td>Issue in Dynamic Forms</td>
+                                            <td>Dynamic Forms</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 456</td>
+                                            <td>Issue in Pharmacy</td>
+                                            <td>Pharmacy</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+ <tr class="even gradeA">
+                                            <td><a href="#" /> 897</td>
+                                            <td>Issue in Billing</td>
+                                            <td>Billing</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Kolkata</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="odd gradeA">
+                                            <td><a href="#" /> 145</td>
+                                            <td>Login Issue in Medmantra</td>
+                                            <td>Registration</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td><a href="#" /> 147</td>
+                                            <td>Slowness in radiology</td>
+                                            <td>Radiology</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Bhubaneswar</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 189</td>
+                                            <td>Issue in MM</td>
+                                            <td>MM</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 191</td>
+                                            <td>Issue in CRM</td>
+                                            <td>CRM</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Mumbai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 235</td>
+                                            <td>Issue in Dynamic Forms</td>
+                                            <td>Dynamic Forms</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 456</td>
+                                            <td>Issue in Pharmacy</td>
+                                            <td>Pharmacy</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+ 					    <tr class="even gradeA">
+                                            <td><a href="#" /> 897</td>
+                                            <td>Issue in Billing</td>
+                                            <td>Billing</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Kolkata</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="odd gradeA">
+                                            <td><a href="#" /> 145</td>
+                                            <td>Login Issue in Medmantra</td>
+                                            <td>Registration</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td><a href="#" /> 147</td>
+                                            <td>Slowness in radiology</td>
+                                            <td>Radiology</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Bhubaneswar</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 189</td>
+                                            <td>Issue in MM</td>
+                                            <td>MM</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 191</td>
+                                            <td>Issue in CRM</td>
+                                            <td>CRM</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Mumbai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 235</td>
+                                            <td>Issue in Dynamic Forms</td>
+                                            <td>Dynamic Forms</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 456</td>
+                                            <td>Issue in Pharmacy</td>
+                                            <td>Pharmacy</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+ 					<tr class="even gradeA">
+                                            <td><a href="#" /> 897</td>
+                                            <td>Issue in Billing</td>
+                                            <td>Billing</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Kolkata</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="odd gradeA">
+                                            <td><a href="#" /> 145</td>
+                                            <td>Login Issue in Medmantra</td>
+                                            <td>Registration</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td><a href="#" /> 147</td>
+                                            <td>Slowness in radiology</td>
+                                            <td>Radiology</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Bhubaneswar</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 189</td>
+                                            <td>Issue in MM</td>
+                                            <td>MM</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 191</td>
+                                            <td>Issue in CRM</td>
+                                            <td>CRM</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Mumbai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 235</td>
+                                            <td>Issue in Dynamic Forms</td>
+                                            <td>Dynamic Forms</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td><a href="#" /> 456</td>
+                                            <td>Issue in Pharmacy</td>
+                                            <td>Pharmacy</td>
+                                            <td class="center">Bug</td>
+                                            <td class="center">Chennai</td>
+                                            <td>Severity 1</td>
+                                            <td>Manoj</td>
+                                            <td class="center">Murty</td>
+                                            <td class="center">7 June 4:52:20 pm</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  End  Striped Rows Table  -->
+                </div>
+              
+            </div>
+      
+   
+     
+        </div>
+        <!-- end page-wrapper -->
+
+    </div>
+    <!-- end wrapper -->
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="assets/plugins/jquery-1.10.2.js"></script>
+    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="assets/plugins/pace/pace.js"></script>
+    <script src="assets/scripts/siminta.js"></script>
+    <!-- Page-Level Plugin Scripts-->
+    <script src="assets/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="assets/plugins/dataTables/dataTables.bootstrap.js"></script>
+    
+</body>
+
+</html>

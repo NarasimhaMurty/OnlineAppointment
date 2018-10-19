@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo Connect-Ticket Settings</title>
+    <!-- Core CSS - Include with every page -->
+    <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
+	  <link href="assets/plugins/multiselect/bootstrap-multiselect.css" rel="stylesheet" />
+   <link href="assets/css/style.css" rel="stylesheet" />
+      <link href="assets/css/main-style.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body>
+    <!--  wrapper -->
+    <div id="wrapper">
+        <!-- navbar top -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+            <!-- navbar-header -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    
+                </a>
+            </div>
+            <!-- end navbar-header -->
+            <!-- navbar-top-links -->
+            <ul class="nav navbar-top-links navbar-right">   
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-3x"></i>
+                    </a>
+                    <!-- dropdown user-->
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                        </li>
+                        
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                        </li>
+                    </ul>
+                    <!-- end dropdown-user -->
+                </li>
+                <!-- end main dropdown -->
+            </ul>
+            <!-- end navbar-top-links -->
+
+        </nav>
+        <!-- end navbar top -->
+
+        <!-- navbar side -->
+        <nav class="navbar-default navbar-static-side" role="navigation"> 
+            <!-- sidebar-collapse -->
+            <div class="sidebar-collapse"> 
+                <!-- side-menu -->
+                <ul class="nav" id="side-menu"> 
+                    <li> 
+			<!-- <div id="sidebar-wrapper">
+            
+				<ul class="sidebar-nav">
+                
+                    <li class="sidebar-brand"> -->
+                        <!-- user image section-->
+                        <div class="user-section">
+                            <div class="user-section-inner">
+                                <img src="assets/img/boy.png" alt="" class="img-circle">
+                            </div>
+                            <div class="user-info">
+                                <div> <strong>Murty</strong></div>
+                              <br/>
+                            </div>
+                        </div>
+                        <!--end user image section-->
+                    </li>
+                    
+                    <li>
+                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                    </li>
+                    
+                     <li>
+                        <a href="#"><i class="fa fa-edit fa-fw"></i>Raise Ticket<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="enduser.html">End User</a>
+                            </li>
+                            <li>
+                                <a href="supportteam.html">Support Team</a>
+                            </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                    
+                    <li class="selected">
+                        <a href="forms.html"><i class="fa fa-gear fa-fw"></i>Ticket Settings</a>
+                    </li>
+                    
+                     <li>
+                        <a href="reports.html"><i class="fa fa-files-o fa-fw"></i>Reports</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user fa-fw"></i>Admin<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li >
+                        <a href="adduser.html"><i class="fa fa-user fa-fw"></i>Add User</a>
+                    </li>
+                           <li >
+                        <a href="addmodule.html" ><i class="fa fa-files-o fa-fw"></i>Add Module</a>
+                    </li>
+					<li >
+                        <a href="addorigin.html"><i class="fa fa-files-o fa-fw"></i>Add Origin</a>
+                    </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                </ul>
+                <!-- end side-menu -->
+            </div>
+            <!-- end sidebar-collapse -->
+         </nav>
+        <!-- end navbar side -->
+        <!--  page-wrapper -->
+          <div id="page-wrapper">
+            <div class="row">
+                 <!-- page header -->
+                <div class="col-lg-12">
+                    <h1 class="page-header">Ticket Settings</h1>
+                </div>
+                <!--end page header -->
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Form Elements -->
+                    <div class="panel panel-default">
+                        
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form" >
+                                      
+                                          <div class="form-group">
+											<label class="col-xs-3 control-label">Modules</label>
+        <div class="col-xs-5">
+            <select id="example-getting-started" multiple="multiple">
+    <option>Es</option>
+                                                <option>Billing</option>
+                                                <option>FNB</option>
+                                                <option>BB</option>
+                                                <option>Pharmacy</option>
+</select>
+
+        </div>
+    </div>
+										
+                                        
+                                    </form>
+                                </div>
+								<div class="col-lg-6">
+                                    <form role="form" >
+                                      
+                                          <div class="form-group">
+											<label class="col-xs-3 control-label">Issue type</label>
+        <div class="col-xs-5">
+            <select id="example-getting-started1" multiple="multiple">
+			<option>Bug</option>
+												<option>Application Access</option>
+                                                <option>Configuration</option>
+                                                <option>Master Data Issue</option>
+												<option>Enhancement</option>
+    
+</select>
+
+        </div>
+    </div>
+										
+                                        
+                                    </form>
+                                </div>
+		<div class="col-lg-6">
+                                    <form role="form" >
+                                      
+                                          <div class="form-group">
+											<label class="col-xs-3 control-label">Severity</label>
+        <div class="col-xs-5">
+            <select id="example-getting-started2" multiple="multiple">
+    <option>Show Stopper</option>
+                                                <option>Critical</option>
+                                                <option>Major</option>
+                                                <option>Minor</option>
+</select>
+
+        </div>
+    </div>
+										
+                                        
+                                    </form>
+                                </div>
+								<div class="col-lg-6">
+                                    <form role="form" >
+                                      
+                                          <div class="form-group">
+											<label class="col-xs-3 control-label">Status</label>
+        <div class="col-xs-5">
+            <select id="example-getting-started3" multiple="multiple">
+												<option>New</option>
+                                                <option>InProgress</option>
+                                                <option>On Hold</option>
+                                                <option>Fixed in Prod</option>
+												<option>Fixed in UAT</option>
+												<option>Clarification</option>
+												<option>Deffered</option>
+</select>
+
+        </div>
+    </div>
+										
+                                        
+                                    </form>
+                                </div>
+								<div class="col-lg-6">
+                                    <form role="form" >
+                                      
+                                          <div class="form-group">
+											<label class="col-xs-3 control-label">Origin</label>
+        <div class="col-xs-5">
+            <select id="example-getting-started4" multiple="multiple">
+    <option>Chennai</option>
+                                                <option>Bangalore</option>
+                                                <option>Kolkata</option>
+                                                <option>Hyderabad</option>
+												<option>Mumbai</option>
+</select>
+
+        </div>
+    </div>
+										
+                                        
+                                    </form>
+                                </div>
+								<div class="col-lg-6">
+                                    <form role="form" >
+                                      
+                                          <div class="form-group">
+											<label class="col-xs-3 control-label">Level of Support</label>
+        <div class="col-xs-5">
+            <select id="example-getting-started5" multiple="multiple">
+												<option>L1</option>
+                                                <option>L2</option>
+                                                <option>L3</option>
+</select>
+
+        </div>
+    </div>
+										
+                                        
+            </form>
+            </div>
+			</br>
+                       
+                            </div>
+                        </div>
+                    </div>
+					
+                     <!-- End Form Elements -->
+                </div>
+            </div>
+		<div class="panel-body ">
+			<div class="row">
+				<div class="col-lg-12">
+					<form role="form" >              
+                        <div class="form-group">
+							<span class="pull-center">
+                                <button type="submit" class="btn btn-primary ">Submit</button>
+                                <button type="reset" class="btn btn-success">Reset</button>
+							</span>
+						</div>
+				    </form>
+				</div>
+			</div>
+		</div>
+        </div>
+        <!-- end page-wrapper -->
+
+    </div>
+    <!-- end wrapper -->
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="assets/plugins/jquery-1.10.2.js"></script>
+    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="assets/plugins/pace/pace.js"></script>
+	 <script src="assets/plugins/multiselect/bootstrap-multiselect.js"></script>
+
+    <script src="assets/scripts/siminta.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#example-getting-started').multiselect();
+    });
+	$(document).ready(function() {
+        $('#example-getting-started1').multiselect();
+    });
+	$(document).ready(function() {
+        $('#example-getting-started2').multiselect();
+    });
+	$(document).ready(function() {
+        $('#example-getting-started3').multiselect();
+    });
+	$(document).ready(function() {
+        $('#example-getting-started4').multiselect();
+    });
+	$(document).ready(function() {
+        $('#example-getting-started5').multiselect();
+    });
+	
+</script>
+
+</body>
+
+</html>

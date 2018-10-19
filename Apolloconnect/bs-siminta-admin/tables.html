@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo Connect-Ticket Details</title>
+    <!-- Core CSS - Include with every page -->
+    <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+      <link href="assets/css/main-style.css" rel="stylesheet" />
+
+    <!-- Page-Level CSS -->
+    <link href="assets/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!--  wrapper -->
+    <div id="wrapper">
+        <!-- navbar top -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+            <!-- navbar-header -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                   
+                </a>
+            </div>
+            <!-- end navbar-header -->
+            <!-- navbar-top-links -->
+			<ul class="nav navbar-top-links navbar-right">   
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-3x"></i>
+                    </a>
+                    <!-- dropdown user-->
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="userprofile.html"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                        </li>
+                        
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                        </li>
+                    </ul>
+                    <!-- end dropdown-user -->
+                </li>
+                <!-- end main dropdown -->
+            </ul>
+            <!-- end navbar-top-links -->
+
+        </nav>
+        <!-- end navbar top -->
+
+        <!-- navbar side -->
+        <nav class="navbar-default navbar-static-side" role="navigation"> 
+            <!-- sidebar-collapse -->
+            <div class="sidebar-collapse"> 
+                <!-- side-menu -->
+                <ul class="nav" id="side-menu"> 
+                    <li> 
+			<!-- <div id="sidebar-wrapper">
+            
+				<ul class="sidebar-nav">
+                
+                    <li class="sidebar-brand"> -->
+                        <!-- user image section-->
+                        <div class="user-section">
+                            <div class="user-section-inner">
+                                <img src="assets/img/boy.png" alt="" class="img-circle">
+                            </div>
+                            <div class="user-info">
+                                <div> <strong>Murty</strong></div>
+                              <br/>
+                            </div>
+                        </div>
+                        <!--end user image section-->
+                    </li>
+                    
+                    <li>
+                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                    </li>
+                    
+                     <li>
+                        <a href="#"><i class="fa fa-edit fa-fw"></i>Raise Ticket<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="forms.html">End User</a>
+                            </li>
+                            <li>
+                                <a href="forms.html">Support Team</a>
+                            </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                    
+                    <li>
+                        <a href="forms.html"><i class="fa fa-gear fa-fw"></i>Ticket Settings</a>
+                    </li>
+                    
+                     <li >
+                        <a href="tables.html"><i class="fa fa-files-o fa-fw"></i>Reports</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user fa-fw"></i>Admin<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                        <a href="forms.html"><i class="fa fa-user fa-fw"></i>Add User</a>
+                    </li>
+                           <li>
+                        <a href="forms.html"><i class="fa fa-files-o fa-fw"></i>Add Module</a>
+                    </li>
+					<li>
+                        <a href="forms.html"><i class="fa fa-files-o fa-fw"></i>Add Origin</a>
+                    </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                </ul>
+                <!-- end side-menu -->
+            </div>
+            <!-- end sidebar-collapse -->
+         </nav>
+        <!-- end navbar side -->
+        <!--  page-wrapper -->
+        <div id="page-wrapper">
+
+            
+            <div class="row">
+                 <!--  page header -->
+                <div class="col-lg-12">
+                    <h1 class="page-header">Ticket Details</h1>
+						<ul class="nav navbar-top-links navbar-right">
+				<li class="dropdown">
+                    <a  href="showcomments.html" >
+                        <span class="top-label label label-danger" >3</span><i class="fa fa-comments-o fa-2x"></i>
+						
+                    </a>
+				</li>
+				<li class="dropdown">
+                    <a  href="attachments.html">
+                        <span class="top-label label label-danger">5</span><i class="fa fa-file-text fa-2x"></i>
+						
+                    </a>
+				</li>
+				</ul>
+                </div>
+				
+				<!-- <span class="pull-right">
+				<a href="showcomments.html">
+							
+								<i class="fa fa-comments-o fa-3x" aria-hidden="true"><span class="badge">5</span></i> 
+								
+						</a>
+						</span>
+						&nbsp;
+						<span class="pull-right">
+				<a href="attachments.html">
+							
+								<i class="fa fa-file-text fa-3x" aria-hidden="true"><span class="badge">2</span></i> 
+								
+						</a>
+						</span>
+						 -->
+						<br>
+                 <!-- end  page header -->
+            </div>
+			<div class="row">
+                <div class="col-lg-12">
+                  <!--   Kitchen Sink -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Ticket Details
+                        </div>
+						
+                        <div class="panel-body">
+                            <div class="form-group">
+                                            
+                                            <textarea class="form-control" rows="8">Opthalmology consultants want separate opthalmology template in DIGITAL web app , which is not available now in DIGITAL like O & G and Paediatrics template . In the existing system , Opthalmology consulatnts are unable to enter consultation details for the patients .Template has been shared by the OPTHALMOLOY consultant DR . C K DEEPA.Please find the attached template for reference .Please do the needful ASAP . </textarea>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- End  Kitchen Sink -->
+                </div>
+                
+            </div>
+			<div class="row">
+                <div class="col-lg-12">
+                    <!-- Form Elements -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Action
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                   <form role="form">
+									<div class="form-group">
+                                            <label>Modules</label>
+                                            <select class="form-control">
+											<option>Select Module</option>
+                                                <option>Es</option>
+                                                <option>Billing</option>
+                                                <option>FNB</option>
+                                                <option>BB</option>
+                                                <option>Pharmacy</option>
+                                            </select>
+                                        </div>
+										<div class="form-group">
+                                            <label>Severity</label>
+                                            <select class="form-control">
+											<option>Select Severity</option>
+                                                <option>Show Stopper</option>
+                                                <option>Critical</option>
+                                                <option>Major</option>
+                                                <option>Minor</option>
+                                               
+                                            </select>
+                                        </div>
+										<div class="form-group">
+                                            <label>Status</label>
+                                            <select class="form-control">
+											<option>Select Status</option>
+                                                <option>New</option>
+                                                <option>InProgress</option>
+                                                <option>On Hold</option>
+                                                <option>Fixed in Prod</option>
+												<option>Fixed in UAT</option>
+												<option>Clarification</option>
+												<option>Deffered</option>
+                                               
+                                            </select>
+                                        </div>
+										<div class="form-group">
+                                            <label>Level of Support</label>
+                                            <select class="form-control">
+											<option>Select Level</option>
+                                                <option>L1</option>
+                                                <option>L2</option>
+                                                <option>L3</option>
+                                            </select>
+                                        </div>
+										<div class="form-group">
+                                            <label>Source</label>
+                                            <select class="form-control">
+											<option>Select Source</option>
+                                                <option>Technical</option>
+                                                <option>Functional</option>
+                                                <option>User</option>
+                                            </select>
+                                        </div><br>
+										
+                                        </div>
+										
+										 <div class="row">
+										<div class="col-lg-4">
+										<div class="form-group ">
+                                            <label>Action By</label>
+                                            <select class="form-control">
+											<option>Murty</option>
+                                                <option>Sruesh</option>
+                                                <option>Alok</option>
+                                                <option>Sanjit</option>
+                                            </select>
+                                        </div>
+										<div class="form-group">
+                                            <label>Select Origin</label>
+                                            <select class="form-control">
+											<option>Chennai</option>
+                                                <option>Bangalore</option>
+                                                <option>Kolkata</option>
+                                                <option>Hyderabad</option>
+												<option>Mumbai</option>
+                                            </select>
+                                        </div>
+										<div class="form-group">
+                                            <label>Issue Type</label>
+                                            <select class="form-control">
+											<option>Bug</option>
+                                                <option>Application Access</option>
+                                                <option>Configuration</option>
+                                                <option>Master Data Issue</option>
+												<option>Enhancement</option>
+                                            </select>
+                                        </div>
+										<div class="form-group">
+                                            <label>Attachments</label>
+                                            <input type="file">
+                                        </div>
+										
+										
+										</div>
+                                        
+                                    </form>
+									
+                                </div>
+                            </div>
+							<div>
+                                     <span class="pull-right">
+                                       <a href="index.html"><button type="submit" class="btn btn-primary ">Submit</button></a>
+                                       <a href="history.html"> <button type="reset" class="btn btn-success">Check History</button></a>
+									   
+										<a href="comment.html">  <button type="reset" class="btn btn-warning">Add Comment</button></a>
+								     </span>
+					        </div>
+                        </div>
+						
+                    </div>
+					
+                     <!-- End Form Elements -->
+                </div>
+            </div>
+           
+         
+        </div>
+        <!-- end page-wrapper -->
+
+    </div>
+    <!-- end wrapper -->
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="assets/plugins/jquery-1.10.2.js"></script>
+    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="assets/plugins/pace/pace.js"></script>
+    <script src="assets/scripts/siminta.js"></script>
+    <!-- Page-Level Plugin Scripts-->
+    <script src="assets/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="assets/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#dataTables-example').dataTable();
+        });
+		
+		
+    </script>
+
+</body>
+
+</html>
